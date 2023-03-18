@@ -5,6 +5,7 @@ function creatList(items, text = "Text") {
   }
   result += "</ul>";
   return result;
+  print("bolinha");
 }
 
 console.log(creatList(5, "Item"));
