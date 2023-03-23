@@ -1,6 +1,6 @@
 function cipher(text, num) {
   result = "";
-  const table = [
+  const alphabet = [
     "a",
     "b",
     "c",
@@ -28,14 +28,15 @@ function cipher(text, num) {
     "y",
     "z",
   ];
-  const lastIndex = table.length - 1;
+  const lastIndex = alphabet.length - 1;
   text = text.split("");
-  for (let i of text) {
-    if (table.indexOf(i) + num > lastIndex) {
-      const aux = table.indexOf(i) + num - lastIndex - 1;
-      result += table[aux];
+
+  for (let letra of text) {
+    if (alphabet.indexOf(letra) + num > lastIndex) {
+      const rotIndex = alphabet.indexOf(letra) + num - lastIndex - 1;
+      result += alphabet[rotIndex];
     } else {
-      result += table[table.indexOf(i) + num];
+      result += alphabet[alphabet.indexOf(letra) + num];
     }
   }
   return result;

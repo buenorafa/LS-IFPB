@@ -9,3 +9,8 @@ const oddNumbers = numbers.filter(function oddNumber(value) {
   }
 });
 console.log(oddNumbers);
+
+const evenNumbers = numbers.filter((num) => {
+  if (num % 2 == 0) return num;
+});
+console.log(evenNumbers);
