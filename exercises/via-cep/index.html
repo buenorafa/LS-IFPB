@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Via-cep</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form>
+      <input type="text" id="cep" placeholder="CEP" required />
+      <div id="erro" class="hidden">
+        <span>O CEP informado é inválido!</span>
+      </div>
+      <input type="text" id="rua" placeholder="Rua" readonly />
+      <input type="text" id="numero" placeholder="Numero" required />
+      <input type="text" id="bairro" placeholder="Bairro" readonly />
+      <div>
+        <input type="text" id="cidade" placeholder="Cidade" readonly />
+        <input type="text" id="uf" placeholder="UF" readonly />
+      </div>
+    </form>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

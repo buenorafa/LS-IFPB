@@ -1,0 +1,52 @@
+body {
+  background-color: #3f4041;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  background-color: rgb(29, 28, 28);
+  border-radius: 10px;
+  padding: 30px;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+input {
+  padding: 0.25rem;
+  border: 1px solid;
+}
+input,
+#erro {
+  border-radius: 0.25rem;
+}
+#erro {
+  padding: 0.25rem 0;
+  width: 100%;
+  border: 1px solid rgba(246, 122, 122, 0.972);
+  background-color: rgb(247, 215, 215);
+  text-align: center;
+}
+#erro span {
+  color: red;
+  font-weight: bold;
+  border: 1px red;
+}
+div:last-of-type {
+  display: flex;
+  justify-content: space-between;
+}
+#cidade {
+  width: 70%;
+}
+.hidden {
+  display: none;
+}
+.input-cep-error {
+  border: 1px solid #f00;
+  background: rgba(255, 0, 0, 0.1);
+}
