@@ -16,7 +16,6 @@ function hideErrorMsg() {
 function cleanForm() {
   document.getElementById("cep").value = "";
   document.getElementById("rua").value = "";
-  document.getElementById("numero").value = "";
   document.getElementById("bairro").value = "";
   document.getElementById("cidade").value = "";
   document.getElementById("uf").value = "";
@@ -26,13 +25,15 @@ document.getElementById("cep").addEventListener("focusout", async () => {
   let cep = document.getElementById("cep").value;
   if (isValid(cep)) {
     hideErrorMsg();
-    url = formatURL(cep);
+    const url = formatURL(cep);
     const request = await fetch(url);
     const dados = await request.json();
 
     if (dados.hasOwnProperty("erro")) {
       errorMsg();
       cleanForm();
+      setTimeout(hideErrorMsg, 500);
+      document.getElementById("cep").focus();
     } else {
       document.getElementById("rua").value = dados.logradouro;
       document.getElementById("bairro").value = dados.bairro;
@@ -43,5 +44,7 @@ document.getElementById("cep").addEventListener("focusout", async () => {
   } else {
     errorMsg();
     cleanForm();
+    setTimeout(hideErrorMsg, 500);
+    document.getElementById("cep").focus();
   }
 });
