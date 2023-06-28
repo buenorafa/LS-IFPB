@@ -3,12 +3,14 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import { Icon } from "leaflet";
 import markers from "../../assets/popup-location.json";
+import { useEffect } from "react";
 
-const customIcon = new Icon({
-  iconUrl: "./location-icon.png",
-  iconSize: [38, 38],
-});
 export default function Map() {
+  const customIcon = new Icon({
+    iconUrl: "./location-icon.png",
+    iconSize: [38, 38],
+  });
+
   return (
     <MapContainer
       center={[-7.1351608999508835, -34.873484685903584]}

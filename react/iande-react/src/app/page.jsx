@@ -5,6 +5,9 @@ import Footer from "./components/Footer";
 import Projects from "./assets/projects.json";
 import Link from "./components/Link";
 import Contact from "./components/Contact";
+import dynamic from "next/dynamic";
+
+const Map = dynamic(() => import("./components/Map/"), { ssr: false });
 
 const padding = "py-16 px-12";
 const greenBackground =
@@ -17,9 +20,9 @@ export default function Home() {
   - Waves (Criar um component das ondas)
   - Section ✅
   - Title ✅
-  - Cards 
+  - Cards ✅
   - Map
-  - Contact
+  - Contact - Mudar a cor do texto dentro dos inputs
   - Footer ✅
   
   */
@@ -106,6 +109,9 @@ export default function Home() {
 
       <section id="mapa" className={`${padding}`}>
         <TitleSection>Locais de coleta</TitleSection>
+        <div id="map" className="flex justify-center align-center pt-12">
+          <Map />
+        </div>
       </section>
       <section
         id="contato"

@@ -5,11 +5,7 @@ export default function NavBar() {
   return (
     <nav className={`flex justify-between ${styles.nav}`}>
       <a href="#">
-        <img
-          className={styles.img}
-          src="./iande-logo.png"
-          alt="Logo da Iandê"
-        />
+        <img src="./iande-logo.png" alt="Logo da Iandê" />
       </a>
 
       <ul className="px-12 flex items-center justify-around gap-12">
