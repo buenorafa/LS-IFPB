@@ -10,6 +10,7 @@ export default function Map() {
     iconUrl: "./location-icon.png",
     iconSize: [38, 38],
   });
+  useEffect(() => {}, []);
 
   return (
     <MapContainer
